@@ -4,14 +4,17 @@
 {% block content %}
 
     <body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="{% url 'login' %}"><b>Metropolitan University </b>Student Management System</a>
-  </div>
+      <div class="login-box" style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">
+        <img src="https://metrouni.edu.bd/frontend/logo/logo.png" alt="AdminLTE Logo" class="brand-image "
+          style="height: 80px; width: 100%;">
+      <!-- <div class="login-logo">
+        <a href="{% url 'login' %}"><b>Metropolitan University </b>Student Management System</a>
+      </div> -->
+      </div>
   <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to Student Management System</p>
+  <div class="card" style="width: 450px; border-radius: 12px;">
+    <div class="card-body login-card-body" style="width: 450px; border-radius: 12px; padding-top: 20px; padding-bottom: 40px;">
+      <p class="login-box-msg" style="font-size: 30px; font-weight: 700; font-family:'Times New Roman', Times, serif; color: black;">Sign in</p>
 
       <form action="{% url 'doLogin' %}" method="POST">
       {% csrf_token %}
